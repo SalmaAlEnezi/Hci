@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="jqtouch/jquery.javascript"></script>
+<script type="text/javascript" src="jqtouch/jqtouch.javascript"></script>
+<script type="text/javascript" src="addevent.javascript"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('https://pixabay.com/en/photos/background/');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("http://www.mk.ru/science/2017/10/31/nasa-predstavilo-podborku-audiozapisey-s-zhutkimi-zvukami-iz-kosmosa.html");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("/w3images/parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+
+    h2 {
+        margin-left: 550px;
+    }
+
+.myForm {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 1em;
+width: 35em;
+padding: 1em;
+border: 1px solid #ccc;
+margin-left: 400px;
+}
+
+.myForm * {
+box-sizing: border-box;
+}
+
+.myForm fieldset {
+border: none;
+padding: 0;
+}
+
+.myForm legend,
+.myForm label {
+padding: 0;
+font-weight: bold;
+}
+
+.myForm label.choice {
+font-size: 0.9em;
+font-weight: normal;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="date"],
+.myForm select,
+.myForm textarea {
+display: block;
+width: 100%;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+    .myForm select,
+    .myForm input[type="date"] {
+    color: gray;
+    font-weight: normal;
+    }
+    
+.myForm textarea {
+height: 100px;
+}
+
+.myForm button {
+padding: 1em;
+border-radius: 0.5em;
+background: #eee;
+border: none;
+font-weight: bold;
+margin-top: 1em;
+width: 130px;
+color: gray;
+}
+
+.myForm button:hover {
+background: #ccc;
+cursor: pointer;
+}
+</style>
+    
+    
+    <script>
+    function myFunction() {
+    var dataname = document.getElementById("ename").value;
+    localStorage.setItem("data1", dataname);
+    
+    var datashow = localStorage.getItem("data1");
+    document.write("<p> name: "+ datashow);
+    }
+    </script>
+    
+    
+    
+<body>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+    <a href="about.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
+    <a href="mywork.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> MY WORK</a>
+    <a href="courses.html" class="w3-bar-item w3-button"><i class="fa fa-book"></i> MY COURSES</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="about.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT ME</a>
+    <a href="mywork.html" class="w3-bar-item w3-button" onclick="toggleFunction()">MY WORK</a>
+    <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+    
+    <div><i><br /></i></div>
+    <div><i><br /></i></div>
+    <div><i><br /></i></div>
+    <h2> Publish an Event </h2>
+    
+    
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+<p>
+<label>Event Name
+<input type="text" name="ename" id="ename">
+</label> 
+</p>
+
+<p>
+<label>Location 
+<input type="tel" name="location" id="location">
+</label>
+</p>
+
+<p>
+<label>Start Date
+<input type="date" name="startdate" id="startdate">
+</label>
+</p>
+
+<p>
+<label>End Date
+<input type="date" name="enddate" id="enddate">
+</label>
+</p>
+    
+<p>
+<label>Start Time
+
+        <select id="stime" name="stime">
+        <option value="01:00">t1</option>
+        <option value="01:30">01:30</option>
+        <option value="02:00">02:00</option>
+        <option value="01:30">02:30</option>
+        <option value="03:00">03:00</option>
+        <option value="01:30">03:30</option>
+        <option value="04:00">04:00</option>
+        <option value="01:30">04:30</option>
+        <option value="05:00">05:00</option>
+        <option value="01:30">05:30</option>
+        <option value="06:00">06:00</option>
+        <option value="t63">06:30</option>
+        <option value="07:00">07:00</option>
+        <option value="07:30">07:30</option>
+        <option value="t8">08:00</option>
+        <option value="08:30">08:30</option>
+        <option value="09:00">09:00</option>
+        <option value="t93">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="t103">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="t113">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="t123">12:30</option>
+        </select>
+            <br>
+        <select>
+        <option value="am">AM</option>
+        <option value="pm">PM</option>
+        </select>
+</label> 
+</p>
+
+    
+<p>
+<label>End Time
+
+        <select id="etime" name="etime">
+        <option value="t1">01:00</option>
+        <option value="t13">01:30</option>
+        <option value="t2">02:00</option>
+        <option value="t23">02:30</option>
+        <option value="t3">03:00</option>
+        <option value="t33">03:30</option>
+        <option value="t4">04:00</option>
+        <option value="t43">04:30</option>
+        <option value="t5">05:00</option>
+        <option value="t53">05:30</option>
+        <option value="t6">06:00</option>
+        <option value="t63">06:30</option>
+        <option value="t7">07:00</option>
+        <option value="t73">07:30</option>
+        <option value="t8">08:00</option>
+        <option value="t83">08:30</option>
+        <option value="t9">09:00</option>
+        <option value="t93">09:30</option>
+        <option value="t10">10:00</option>
+        <option value="t103">10:30</option>
+        <option value="t11">11:00</option>
+        <option value="t113">11:30</option>
+        <option value="t12">12:00</option>
+        <option value="t123">12:30</option>
+        </select>
+            <br>
+        <select>
+        <option value="am">AM</option>
+        <option value="pm">PM</option>
+        </select>
+</label> 
+</p>
+
+    
+<fieldset>
+<legend>For :</legend>
+<p><label class="choice"> <input type="checkbox" name="for" id="for" value="Male"> Male </label></p>
+<p><label class="choice"> <input type="checkbox" name="for" id="for" value="Female"> Female </label></p>
+<p><label class="choice"> <input type="checkbox" name="for" id="for" value="Students"> Students </label></p>
+<p><label class="choice"> <input type="checkbox" name="for" id="for" value="faculty"> Faculty Members </label></p>
+<p><label class="choice"> <input type="checkbox" name="for" id="for" value="employees"> Employees </label></p>
+<p><label class="choice"> <input type="checkbox" name="for" id="for" value="public"> Public </label></p>
+</fieldset>
+    
+<fieldset>
+<legend>From :</legend>
+<p><label class="choice"> <input type="radio" name="from"  id="from" value="KSU"> KSU </label></p>
+<p><label class="choice"> <input type="radio" name="from"  id="from" value="Outside KSU"> Outside KSU </label></p>
+<p><label class="choice"> <input type="radio" name="from"  id="from" value="Both"> Both </label></p>
+</fieldset>
+
+<p>
+<label>Description
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+
+    <p><button onclick="add()">Submit</button></p>
+    
+ 
+    <button onclick="window.location.href='index.html'"> Cancel </button>
+    
+
+
+    <script>
+        function goHome() {
+            
+        }
+                function add()
+                {
+                    var name = document.getElementById("ename").value;
+                    localStorage.setItem("named",name);
+                    var names = localStorage.getItem("named");
+                    
+                    
+                    var loc = document.getElementById("location").value;
+                    localStorage.setItem("locd",loc);
+                    var locs = localStorage.getItem("locd");
+                    
+                    var startd = document.getElementById("startdate").value;
+                    localStorage.setItem("startdated",startd);
+                    var startds = localStorage.getItem("startdated");
+                    
+                    var endd = document.getElementById("enddate").value;
+                    localStorage.setItem("enddated",endd);
+                    var endds = localStorage.getItem("enddated");
+                    
+                    var startt = document.getElementById("stime").value;
+                    localStorage.setItem("starttime",startt);
+                    var startts = localStorage.getItem("starttime");
+                    
+                    var endt = document.getElementById("etime").value;
+                    localStorage.setItem("endtime",endt);
+                    var endts = localStorage.getItem("endtime");
+                    
+                    var forr = document.getElementById("for").value;
+                    localStorage.setItem("forcheck",forr);
+                    var forrs = localStorage.getItem("forcheck");
+                    
+                    var from = document.getElementById("from").value;
+                    localStorage.setItem("fromradio",from);
+                    var froms = localStorage.getItem("fromradio");
+                    
+                    document.write("<p> Event Name: "+names);
+                    document.write("<p> Location: "+locs);
+                    document.write("<p> Start Date: "+startds);
+                    document.write("<p> End Date: "+endds);
+                    document.write("<p> Start Time: "+startts);
+                    document.write("<p> End Time: "+endts);
+                    document.write("<p> For: "+forrs);
+                    document.write("<p> From: "+froms);
+            
+                    
+                    var name = document.getElementById('ename').value;
+                    localStorage.setItem('nd', name);
+                    document.getElementById("result").innerHTML = localStorage.getItem("nd");
+                    
+            
+                     document.write("<p> Location: "+locs);
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    var ename2 = localStorage.getItem("namedata");
+                    document.write("<p> Event Name: " + ename2);
+                    
+                    var dataToSave2 = document.getElementById('location').value;
+                    document.write(dataToSave2 + "</br>");
+                    
+                    document.write("Location: " + location + "<br>");
+                    document.write("For: " + forr + "<br>");
+                    document.write("From: " + from + "<br>");
+                    document.write("Start Date: " + startdate + "<br>");
+                    document.write("End Date: " + enddate + "<br>");
+                    document.write("Start Time: " + stime + "<br>");
+                    document.write("End Time: " + etime + "<br>");
+                    document.write("Description: " + comments + "<br>");
+                }
+    </script>
+  </form>              
+         
+          
+    
+    
+             
+        <div><i><br /></i></div>
+    <div><i><br /></i></div>
+    </body>
+</html>
